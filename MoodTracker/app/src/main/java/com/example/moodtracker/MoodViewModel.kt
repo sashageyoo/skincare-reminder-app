@@ -27,11 +27,11 @@ class MoodViewModel(application: Application) : AndroidViewModel(application) {
             if (habitDao.getCount() == 0) {
                 val defaultHabits = listOf(
                     Habit(iconRes = R.drawable.img_wakeup_habit, title = "Wake Up Early", description = "Start the day...", points = 20),
-                    Habit(iconRes = R.drawable.img_sleep_habit, title = "Sleep Early", description = "End the day gently...", points = 20),
-                    Habit(iconRes = R.drawable.img_pray_habit, title = "Daily Pray", description = "Take your moment...", points = 30),
-                    Habit(iconRes = R.drawable.img_exercise_habit, title = "Exercise", description = "Move your body...", points = 20),
-                    Habit(iconRes = R.drawable.img_selfcare_habit, title = "Self-care", description = "Do your skincare...", points = 20),
-                    Habit(iconRes = R.drawable.img_hobbies_habit, title = "Hobbies", description = "Spend time...", points = 20)
+                    Habit(iconRes = R.drawable.img_sleep_habit, title = "Sleep Early", description = "End the day gently...", points = 30),
+                    Habit(iconRes = R.drawable.img_pray_habit, title = "Daily Pray", description = "Take your moment...", points = 20),
+                    Habit(iconRes = R.drawable.img_exercise_habit, title = "Exercise", description = "Move your body...", points = 10),
+                    Habit(iconRes = R.drawable.img_selfcare_habit, title = "Self-care", description = "Do your skincare...", points = 10),
+                    Habit(iconRes = R.drawable.img_hobbies_habit, title = "Hobbies", description = "Spend time...", points = 10)
                 )
                 defaultHabits.forEach { habitDao.insertHabit(it) }
             }
